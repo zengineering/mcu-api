@@ -1,0 +1,117 @@
+[
+    { 
+        "title": "Iron Man",
+        "release": "02 May 2008",
+        "director": "Jon Favreau"
+    },
+    { 
+        "title": "The Incredible Hulk",
+        "release": "13 June 2008",
+        "director": "Louis Leterrier"
+    },
+    { 
+        "title": "Iron Man 2",
+        "release": "07 May 2010",
+        "director": "Jon Favreau"
+    },
+    { 
+        "title": "Thor",
+        "release": "06 May 2011",
+        "director": "Jon Favreau"
+    },
+    { 
+        "title": "Captain America: The First Avenger" },
+        "release": "22 July 2011",
+        "director": "Joe Johnston"
+    },
+    { 
+        "title": "Marvel's The Avengers" },
+        "release": "04 May 2012",
+        "director": "Joss Whedon"
+    },
+    { 
+        "title": "Iron Man 3",
+        "release": "03 May 2013",
+        "director": "Shane Black"
+    },
+    { 
+        "title": "Thor: The Dark World",
+        "release": "08 November 2013",
+        "director": "Shane Black"
+    },
+    { 
+        "title": "Captain America: The Winter Soldier",
+        "release": "04 April 2014",
+        "director": "Anthony and Joe Russo"
+    },
+    { 
+        "title": "Guardians of the Galaxy",
+        "release": "01 August 2014",
+        "director": "James Gunn"
+    },
+    { 
+        "title": "Avengers: Age of Ultron",
+        "release": "01 May 2015",
+        "director": "Joss Whedon"
+    },
+    { 
+        "title": "Ant-Man",
+        "release": "17 July 2015",
+        "director": "Peyton Reed"
+    },
+    { 
+        "title": "Captain America: Civil War",
+        "release": "06 May 2016",
+        "director": "Anthony and Joe Russo"
+    },
+    { 
+        "title": "Doctor Strange",
+        "release": "04 November 2016",
+        "director": "Scott Derrickson"
+    },
+    { 
+        "title": "Captain America: Civil War",
+        "release": "06 May 2016",
+        "director": "Anthony and Joe Russo"
+    },
+    { 
+        "title": "Guardians of the Galaxy Vol. 2",
+        "release": "05 May 2017",
+        "director": "James Gunn"
+    },
+    { 
+        "title": "Spider-Man: Homecoming",
+        "release": "07 July 2017",
+        "director": "Jon Watts"
+    },
+    { 
+        "title": "Thor: Ragnarok",
+        "release": "03 November 2017",
+        "director": "Taika Waititi"
+    },
+    { 
+        "title": "Black Panther",
+        "release": "16 February 2018",
+        "director": "Ryan Coogler"
+    },
+    { 
+        "title": "Avengers: Infinity War",
+        "release": "27 April 2018",
+        "director": "Anthony and Joe Russo"
+    },
+    { 
+        "title": "Ant-Man and the Wasp",
+        "release": "06 July 2018",
+        "director": "Peyton Reed"
+    },
+    { 
+        "title": "Captain Marvel",
+        "release": "08 March 2019",
+        "director": "Anna Boden and Ryan Fleck"
+    },
+    { 
+        "title": "Avengers: Endgame",
+        "release": "26 April 2019",
+        "director": "Anthony and Joe Russo"
+    }
+]
