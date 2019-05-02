@@ -72,6 +72,14 @@
                 "Anthony Mackie"
             ]
         },
+        {
+            "name": "Johann Schmidt",
+            "alter-ego": "Red Skull",
+            "actors": [
+                "Hugo Weaving",
+                "Ross Marquand"
+            ]
+        },
 
         {
             "name": "Clint Barton",
@@ -227,6 +235,7 @@
                 "Brie Larson"
             ]
         },
+
         {
             "name": "Vision",
             "alter-ego": "None",
