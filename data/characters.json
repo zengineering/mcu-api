@@ -1,386 +1,422 @@
-    "characters": [
-        {
-            "name": "Tony Stark",
-            "alter-ego": "Iron Man",
-            "actors": [
-                "Robert Downey Jr."
-            ]
-        },
-        {
-            "name": "James Rhodes",
-            "alter-ego": "War Machine",
-            "actors": [
-                "Terrence Howard",
-                "Don Cheadle"
-            ]
-        },
-        {
-            "name": "Pepper Potts",
-            "alter-ego": "None",
-            "actors": [
-                "Gyneth Paltrow"
-            ]
-        },
-        {
-            "name": "Happy Hogan",
-            "alter-ego": "None",
-            "actors": [
-                "Jon Favreau"
-            ]
-        },
-        {
-            "name": "Howard Stark",
-            "alter-ego": "None",
-            "actors": [
-                "Dominic Cooper",
-                "John Slattery"
-            ]
-        },
-        {
-            "name": "Jarvis",
-            "alter-ego": "None",
-            "actors": [
-                "Paul Bettany"
-            ]
-        },
-
-        {
-            "name": "Steve Rogers",
-            "alter-ego": "Captain America",
-            "actors": [
-                "Chris Evans"
-            ]
-        },
-        {
-            "name": "James 'Bucky' Barnes",
-            "alter-ego": "Winter Soldier",
-            "actors": [
-                "Sebastian Stan"
-            ]
-        },
-        {
-            "name": "Peggy Carter",
-            "alter-ego": "None",
-            "actors": [
-                "Hayley Atwell"
-            ]
-        },
-        {
-            "name": "Sam Wilson",
-            "alter-ego": "Falcon",
-            "actors": [
-                "Anthony Mackie"
-            ]
-        },
-        {
-            "name": "Johann Schmidt",
-            "alter-ego": "Red Skull",
-            "actors": [
-                "Hugo Weaving",
-                "Ross Marquand"
-            ]
-        },
-
-        {
-            "name": "Clint Barton",
-            "alter-ego": "Hawkeye",
-            "actors": [
-                "Jeremy Renner"
-            ]
-        },
-        {
-            "name": "Natasha Romanoff",
-            "alter-ego": "Black Widow",
-            "actors": [
-                "Scarlett Johansson"
-            ]
-        },
-        {
-            "name": "Nick Fury",
-            "alter-ego": "None",
-            "actors": [
-                "Samuel Jackson"
-            ]
-        },
-        {
-            "name": "Phil Coulson",
-            "alter-ego": "None",
-            "actors": [
-                "Clark Gregg"
-            ]
-        },
-        {
-            "name": "Maria Hill",
-            "alter-ego": "None",
-            "actors": [
-                "Cobie Smulders"
-            ]
-        },
-        {
-            "name": "Everett Ross",
-            "alter-ego": "None",
-            "actors": [
-                "Martin Freeman"
-            ]
-        },
-
-        {
-            "name": "Thor",
-            "alter-ego": "None",
-            "actors": [
-                "Chris Hemsworth"
-            ]
-        },
-        {
-            "name": "Jane Foster",
-            "alter-ego": "None",
-            "actors": [
-                "Natalie Portman"
-            ]
-        },
-        {
-            "name": "Loki",
-            "alter-ego": "None",
-            "actors": [
-                "Tom Hiddleston"
-            ]
-        },
-        {
-            "name": "Heimdall",
-            "alter-ego": "None",
-            "actors": [
-                "Idris Elba"
-            ]
-        },
-        {
-            "name": "Odin",
-            "alter-ego": "None",
-            "actors": [
-                "Anthony Hopkins"
-            ]
-        },
-        {
-            "name": "Frigga",
-            "alter-ego": "None",
-            "actors": [
-                "Rene Russo"
-            ]
-        },
-        {
-            "name": "Sif",
-            "alter-ego": "None",
-            "actors": [
-                "Jaimie Alexander"
-            ]
-        },
-        {
-            "name": "Erik Selvig",
-            "alter-ego": "None",
-            "actors": [
-                "Stellan Skarsgard"
-            ]
-        },
-        {
-            "name": "Korg",
-            "alter-ego": "None",
-            "actors": [
-                "Taika Waititi"
-            ]
-        },
-
-        {
-            "name": "Peter Parker",
-            "alter-ego": "Spider-Man",
-            "actors": [
-                "Tom Holland"
-            ]
-        },
-        {
-            "name": "May Parker",
-            "alter-ego": "Aunt May",
-            "actors": [
-                "Marisa Tomei"
-            ]
-        },
-        {
-            "name": "Ned Leeds",
-            "alter-ego": "None",
-            "actors": [
-                "Jacob Batalon"
-            ]
-        },
-        
-
-
-        {
-            "name": "Bruce Banner",
-            "alter-ego": "Hulk",
-            "actors": [
-                "Edward Norton",
-                "Mark Ruffalo"
-            ]
-        },
-        {
-            "name": "Thaddeus Ross",
-            "alter-ego": "None",
-            "actors": [
-                "William Hurt"
-            ]
-        },
-
-        {
-            "name": "Carol Danvers",
-            "alter-ego": "Captain Marvel",
-            "actors": [
-                "Brie Larson"
-            ]
-        },
-
-        {
-            "name": "Vision",
-            "alter-ego": "None",
-            "actors": [
-                "Paul Bettany"
-            ]
-        },
-        {
-            "name": "Wanda Maximoff",
-            "alter-ego": "Scarlet Witch",
-            "actors": [
-                "Elizabeth Olsen"
-            ]
-        },
-
-        {
-            "name": "Peter Quill",
-            "alter-ego": "Star-Lord",
-            "actors": [
-                "Chris Pratt"
-            ]
-        },
-        {
-            "name": "Gamora",
-            "alter-ego": "None",
-            "actors": [
-                "Zoe Saldana"
-            ]
-        },
-        {
-            "name": "Drax",
-            "alter-ego": "The Destroyer",
-            "actors": [
-                "Dave Bautista"
-            ]
-        },
-        {
-            "name": "Rocket",
-            "alter-ego": "None",
-            "actors": [
-                "Bradley Cooper"
-            ]
-        },
-        {
-            "name": "Groot",
-            "alter-ego": "None",
-            "actors": [
-                "Vin Diesel"
-            ]
-        },
-        {
-            "name": "Nebula",
-            "alter-ego": "None",
-            "actors": [
-                "Karen Gillan"
-            ]
-        },
-        {
-            "name": "Mantis",
-            "alter-ego": "None",
-            "actors": [
-                "Pom Klementieff"
-            ]
-        },
-        {
-            "name": "Ronan",
-            "alter-ego": "The Accuser",
-            "actors": [
-                "Lee Pace"
-            ]
-        },
-
-        {
-            "name": "Scott Lang",
-            "alter-ego": "Ant-Man",
-            "actors": [
-                "Paul Rudd"
-            ]
-        },
-        {
-            "name": "Hank Pym",
-            "alter-ego": "Ant-Man",
-            "actors": [
-                "Michael Douglas"
-            ]
-        },
-        {
-            "name": "Hope Van Dyne",
-            "alter-ego": "Wasp",
-            "actors": [
-                "Evangeline Lily"
-            ]
-        },
-
-        {
-            "name": "Stephen Strange",
-            "alter-ego": "Doctor Strange",
-            "actors": [
-                "Benedict Cumberbatch"
-            ]
-        },
-        {
-            "name": "Wong",
-            "alter-ego": "None",
-            "actors": [
-                "Benedict Wong"
-            ]
-        },
-        {
-            "name": "The Ancient One",
-            "alter-ego": "",
-            "actors": [
-                "Tilda Swinton"
-            ]
-        },
-
-        {
-            "name": "T'Challa",
-            "alter-ego": "Black Panther",
-            "actors": [
-                "Chadwick Boseman"
-            ]
-        },
-        {
-            "name": "Okoye",
-            "alter-ego": "None",
-            "actors": [
-                "Danai Gurira"
-            ]
-        },
-        {
-            "name": "Shuri",
-            "alter-ego": "None",
-            "actors": [
-                "Letitia Wright"
-            ]
-        },
-
-        {
-            "name": "Thanos",
-            "alter-ego": "The Mad Titan",
-            "actors": [
-                "Josh Brolin"
-            ]
-        },
-
-}
-
+[
+    {
+        "name": "Tony Stark",
+        "alter-ego": "Iron Man",
+        "actors": [
+            "Robert Downey Jr."
+        ],
+        "id": 1
+    },
+    {
+        "name": "James Rhodes",
+        "alter-ego": "War Machine",
+        "actors": [
+            "Terrence Howard",
+            "Don Cheadle"
+        ],
+        "id": 2
+    },
+    {
+        "name": "Pepper Potts",
+        "alter-ego": "None",
+        "actors": [
+            "Gyneth Paltrow"
+        ],
+        "id": 3
+    },
+    {
+        "name": "Happy Hogan",
+        "alter-ego": "None",
+        "actors": [
+            "Jon Favreau"
+        ],
+        "id": 4
+    },
+    {
+        "name": "Howard Stark",
+        "alter-ego": "None",
+        "actors": [
+            "Dominic Cooper",
+            "John Slattery"
+        ],
+        "id": 5
+    },
+    {
+        "name": "Jarvis",
+        "alter-ego": "None",
+        "actors": [
+            "Paul Bettany"
+        ],
+        "id": 6
+    },
+    {
+        "name": "Steve Rogers",
+        "alter-ego": "Captain America",
+        "actors": [
+            "Chris Evans"
+        ],
+        "id": 7
+    },
+    {
+        "name": "James 'Bucky' Barnes",
+        "alter-ego": "Winter Soldier",
+        "actors": [
+            "Sebastian Stan"
+        ],
+        "id": 8
+    },
+    {
+        "name": "Peggy Carter",
+        "alter-ego": "None",
+        "actors": [
+            "Hayley Atwell"
+        ],
+        "id": 9
+    },
+    {
+        "name": "Sam Wilson",
+        "alter-ego": "Falcon",
+        "actors": [
+            "Anthony Mackie"
+        ],
+        "id": 10
+    },
+    {
+        "name": "Johann Schmidt",
+        "alter-ego": "Red Skull",
+        "actors": [
+            "Hugo Weaving",
+            "Ross Marquand"
+        ],
+        "id": 11
+    },
+    {
+        "name": "Clint Barton",
+        "alter-ego": "Hawkeye",
+        "actors": [
+            "Jeremy Renner"
+        ],
+        "id": 12
+    },
+    {
+        "name": "Natasha Romanoff",
+        "alter-ego": "Black Widow",
+        "actors": [
+            "Scarlett Johansson"
+        ],
+        "id": 13
+    },
+    {
+        "name": "Nick Fury",
+        "alter-ego": "None",
+        "actors": [
+            "Samuel Jackson"
+        ],
+        "id": 14
+    },
+    {
+        "name": "Phil Coulson",
+        "alter-ego": "None",
+        "actors": [
+            "Clark Gregg"
+        ],
+        "id": 15
+    },
+    {
+        "name": "Maria Hill",
+        "alter-ego": "None",
+        "actors": [
+            "Cobie Smulders"
+        ],
+        "id": 16
+    },
+    {
+        "name": "Everett Ross",
+        "alter-ego": "None",
+        "actors": [
+            "Martin Freeman"
+        ],
+        "id": 17
+    },
+    {
+        "name": "Thor",
+        "alter-ego": "None",
+        "actors": [
+            "Chris Hemsworth"
+        ],
+        "id": 18
+    },
+    {
+        "name": "Jane Foster",
+        "alter-ego": "None",
+        "actors": [
+            "Natalie Portman"
+        ],
+        "id": 19
+    },
+    {
+        "name": "Loki",
+        "alter-ego": "None",
+        "actors": [
+            "Tom Hiddleston"
+        ],
+        "id": 20
+    },
+    {
+        "name": "Heimdall",
+        "alter-ego": "None",
+        "actors": [
+            "Idris Elba"
+        ],
+        "id": 21
+    },
+    {
+        "name": "Odin",
+        "alter-ego": "None",
+        "actors": [
+            "Anthony Hopkins"
+        ],
+        "id": 22
+    },
+    {
+        "name": "Frigga",
+        "alter-ego": "None",
+        "actors": [
+            "Rene Russo"
+        ],
+        "id": 23
+    },
+    {
+        "name": "Sif",
+        "alter-ego": "None",
+        "actors": [
+            "Jaimie Alexander"
+        ],
+        "id": 24
+    },
+    {
+        "name": "Erik Selvig",
+        "alter-ego": "None",
+        "actors": [
+            "Stellan Skarsgard"
+        ],
+        "id": 25
+    },
+    {
+        "name": "Korg",
+        "alter-ego": "None",
+        "actors": [
+            "Taika Waititi"
+        ],
+        "id": 26
+    },
+    {
+        "name": "Peter Parker",
+        "alter-ego": "Spider-Man",
+        "actors": [
+            "Tom Holland"
+        ],
+        "id": 27
+    },
+    {
+        "name": "May Parker",
+        "alter-ego": "Aunt May",
+        "actors": [
+            "Marisa Tomei"
+        ],
+        "id": 28
+    },
+    {
+        "name": "Ned Leeds",
+        "alter-ego": "None",
+        "actors": [
+            "Jacob Batalon"
+        ],
+        "id": 29
+    },
+    {
+        "name": "Bruce Banner",
+        "alter-ego": "Hulk",
+        "actors": [
+            "Edward Norton",
+            "Mark Ruffalo"
+        ],
+        "id": 30
+    },
+    {
+        "name": "Thaddeus Ross",
+        "alter-ego": "None",
+        "actors": [
+            "William Hurt"
+        ],
+        "id": 31
+    },
+    {
+        "name": "Carol Danvers",
+        "alter-ego": "Captain Marvel",
+        "actors": [
+            "Brie Larson"
+        ],
+        "id": 32
+    },
+    {
+        "name": "Vision",
+        "alter-ego": "None",
+        "actors": [
+            "Paul Bettany"
+        ],
+        "id": 33
+    },
+    {
+        "name": "Wanda Maximoff",
+        "alter-ego": "Scarlet Witch",
+        "actors": [
+            "Elizabeth Olsen"
+        ],
+        "id": 34
+    },
+    {
+        "name": "Peter Quill",
+        "alter-ego": "Star-Lord",
+        "actors": [
+            "Chris Pratt"
+        ],
+        "id": 35
+    },
+    {
+        "name": "Gamora",
+        "alter-ego": "None",
+        "actors": [
+            "Zoe Saldana"
+        ],
+        "id": 36
+    },
+    {
+        "name": "Drax",
+        "alter-ego": "The Destroyer",
+        "actors": [
+            "Dave Bautista"
+        ],
+        "id": 37
+    },
+    {
+        "name": "Rocket",
+        "alter-ego": "None",
+        "actors": [
+            "Bradley Cooper"
+        ],
+        "id": 38
+    },
+    {
+        "name": "Groot",
+        "alter-ego": "None",
+        "actors": [
+            "Vin Diesel"
+        ],
+        "id": 39
+    },
+    {
+        "name": "Nebula",
+        "alter-ego": "None",
+        "actors": [
+            "Karen Gillan"
+        ],
+        "id": 40
+    },
+    {
+        "name": "Mantis",
+        "alter-ego": "None",
+        "actors": [
+            "Pom Klementieff"
+        ],
+        "id": 41
+    },
+    {
+        "name": "Ronan",
+        "alter-ego": "The Accuser",
+        "actors": [
+            "Lee Pace"
+        ],
+        "id": 42
+    },
+    {
+        "name": "Scott Lang",
+        "alter-ego": "Ant-Man",
+        "actors": [
+            "Paul Rudd"
+        ],
+        "id": 43
+    },
+    {
+        "name": "Hank Pym",
+        "alter-ego": "Ant-Man",
+        "actors": [
+            "Michael Douglas"
+        ],
+        "id": 44
+    },
+    {
+        "name": "Hope Van Dyne",
+        "alter-ego": "Wasp",
+        "actors": [
+            "Evangeline Lily"
+        ],
+        "id": 45
+    },
+    {
+        "name": "Stephen Strange",
+        "alter-ego": "Doctor Strange",
+        "actors": [
+            "Benedict Cumberbatch"
+        ],
+        "id": 46
+    },
+    {
+        "name": "Wong",
+        "alter-ego": "None",
+        "actors": [
+            "Benedict Wong"
+        ],
+        "id": 47
+    },
+    {
+        "name": "The Ancient One",
+        "alter-ego": "None",
+        "actors": [
+            "Tilda Swinton"
+        ],
+        "id": 48
+    },
+    {
+        "name": "T'Challa",
+        "alter-ego": "Black Panther",
+        "actors": [
+            "Chadwick Boseman"
+        ],
+        "id": 49
+    },
+    {
+        "name": "Okoye",
+        "alter-ego": "None",
+        "actors": [
+            "Danai Gurira"
+        ],
+        "id": 50
+    },
+    {
+        "name": "Shuri",
+        "alter-ego": "None",
+        "actors": [
+            "Letitia Wright"
+        ],
+        "id": 51
+    },
+    {
+        "name": "Thanos",
+        "alter-ego": "None",
+        "actors": [
+            "Josh Brolin"
+        ],
+        "id": 52
+    }
+]
