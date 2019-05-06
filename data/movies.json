@@ -3,132 +3,198 @@
         "title": "Iron Man",
         "release": "02 May 2008",
         "director": "Jon Favreau",
-        "id": 1
+        "id": 1,
+        "runtime": 126,
+        "box-office-usa": 318.4,
+        "box-office-world": 585.2
     },
     {
         "title": "The Incredible Hulk",
         "release": "13 June 2008",
         "director": "Louis Leterrier",
-        "id": 2
+        "id": 2,
+        "runtime": 118,
+        "box-office-usa": 134.8,
+        "box-office-world": 263.4
     },
     {
         "title": "Iron Man 2",
         "release": "07 May 2010",
         "director": "Jon Favreau",
-        "id": 3
+        "id": 3,
+        "runtime": 124,
+        "box-office-usa": 312.4,
+        "box-office-world": 623.9
     },
     {
         "title": "Thor",
         "release": "06 May 2011",
-        "director": "Jon Favreau",
-        "id": 4
+        "director": "Kenneth Branagh",
+        "id": 4,
+        "runtime": 115,
+        "box-office-usa": 181.0,
+        "box-office-world": 449.3
     },
     {
         "title": "Captain America: The First Avenger",
         "release": "22 July 2011",
         "director": "Joe Johnston",
-        "id": 5
+        "id": 5,
+        "runtime": 124,
+        "box-office-usa": 176.7,
+        "box-office-world": 370.6
     },
     {
         "title": "Marvel's The Avengers",
         "release": "04 May 2012",
         "director": "Joss Whedon",
-        "id": 6
+        "id": 6,
+        "runtime": 143,
+        "box-office-usa": 623.4,
+        "box-office-world": 1518.8
     },
     {
         "title": "Iron Man 3",
         "release": "03 May 2013",
         "director": "Shane Black",
-        "id": 7
+        "id": 7,
+        "runtime": 130,
+        "box-office-usa": 409.0,
+        "box-office-world": 1214.8
     },
     {
         "title": "Thor: The Dark World",
         "release": "08 November 2013",
-        "director": "Shane Black",
-        "id": 8
+        "director": "Alan Taylor",
+        "id": 8,
+        "runtime": 112,
+        "box-office-usa": 206.4,
+        "box-office-world": 644.6
     },
     {
         "title": "Captain America: The Winter Soldier",
         "release": "04 April 2014",
         "director": "Anthony and Joe Russo",
-        "id": 9
+        "id": 9,
+        "runtime": 136,
+        "box-office-usa": 259.8,
+        "box-office-world": 714.3
     },
     {
         "title": "Guardians of the Galaxy",
         "release": "01 August 2014",
         "director": "James Gunn",
-        "id": 10
+        "id": 10,
+        "runtime": 121,
+        "box-office-usa": 333.2,
+        "box-office-world": 773.3
     },
     {
         "title": "Avengers: Age of Ultron",
         "release": "01 May 2015",
         "director": "Joss Whedon",
-        "id": 11
+        "id": 11,
+        "runtime": 141,
+        "box-office-usa": 459.0,
+        "box-office-world": 1405.4
     },
     {
         "title": "Ant-Man",
         "release": "17 July 2015",
         "director": "Peyton Reed",
-        "id": 12
+        "id": 12,
+        "runtime": 117,
+        "box-office-usa": 180.2,
+        "box-office-world": 519.3
     },
     {
         "title": "Captain America: Civil War",
         "release": "06 May 2016",
         "director": "Anthony and Joe Russo",
-        "id": 13
+        "id": 13,
+        "runtime": 147,
+        "box-office-usa": 408.1,
+        "box-office-world": 1153.3
     },
     {
         "title": "Doctor Strange",
         "release": "04 November 2016",
         "director": "Scott Derrickson",
-        "id": 14
+        "id": 14,
+        "runtime": 115,
+        "box-office-usa": 232.6,
+        "box-office-world": 677.7
     },
     {
         "title": "Guardians of the Galaxy Vol. 2",
         "release": "05 May 2017",
         "director": "James Gunn",
-        "id": 15
+        "id": 15,
+        "runtime": 136,
+        "box-office-usa": 389.8,
+        "box-office-world": 773.3
     },
     {
         "title": "Spider-Man: Homecoming",
         "release": "07 July 2017",
         "director": "Jon Watts",
-        "id": 16
+        "id": 16,
+        "runtime": 133,
+        "box-office-usa": 334.2,
+        "box-office-world": 880.2
     },
     {
         "title": "Thor: Ragnarok",
         "release": "03 November 2017",
         "director": "Taika Waititi",
-        "id": 17
+        "id": 17,
+        "runtime": 130,
+        "box-office-usa": 315.1,
+        "box-office-world": 854
     },
     {
         "title": "Black Panther",
         "release": "16 February 2018",
         "director": "Ryan Coogler",
-        "id": 18
+        "id": 18,
+        "runtime": 134,
+        "box-office-usa": 700.1,
+        "box-office-world": 1346.9
     },
     {
         "title": "Avengers: Infinity War",
         "release": "27 April 2018",
         "director": "Anthony and Joe Russo",
-        "id": 19
+        "id": 19,
+        "runtime": 149,
+        "box-office-usa": 678.8,
+        "box-office-world": 2048.4
     },
     {
         "title": "Ant-Man and the Wasp",
         "release": "06 July 2018",
         "director": "Peyton Reed",
-        "id": 20
+        "id": 20,
+        "runtime": 118,
+        "box-office-usa": 216.7,
+        "box-office-world": 622.7
     },
     {
         "title": "Captain Marvel",
         "release": "08 March 2019",
         "director": "Anna Boden and Ryan Fleck",
-        "id": 21
+        "id": 21,
+        "runtime": 123,
+        "box-office-usa": 420.8,
+        "box-office-world": 1120.2
     },
     {
         "title": "Avengers: Endgame",
         "release": "26 April 2019",
         "director": "Anthony and Joe Russo",
-        "id": 22
+        "id": 22,
+        "runtime": 181,
+        "box-office-usa": 619.7,
+        "box-office-world": 2192.2
     }
 ]
