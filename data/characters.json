@@ -5,7 +5,10 @@
         "actors": [
             "Robert Downey Jr."
         ],
-        "id": 1
+        "id": 1,
+        "movies" : [
+            1, 3, 6, 7, 11, 13, 16, 19, 22
+        ]
     },
     {
         "name": "James Rhodes",
@@ -14,7 +17,10 @@
             "Terrence Howard",
             "Don Cheadle"
         ],
-        "id": 2
+        "id": 2,
+        "movies" : [
+            1, 3, 7, 11, 13, 19, 22
+        ]
     },
     {
         "name": "Pepper Potts",
@@ -22,7 +28,10 @@
         "actors": [
             "Gyneth Paltrow"
         ],
-        "id": 3
+        "id": 3,
+        "movies" : [
+            1, 3, 6, 7, 16, 19, 22
+        ]
     },
     {
         "name": "Happy Hogan",
@@ -30,7 +39,10 @@
         "actors": [
             "Jon Favreau"
         ],
-        "id": 4
+        "id": 4,
+        "movies" : [
+            1, 3, 6, 7, 11, 16, 22
+        ]
     },
     {
         "name": "Howard Stark",
@@ -39,7 +51,10 @@
             "Dominic Cooper",
             "John Slattery"
         ],
-        "id": 5
+        "id": 5,
+        "movies" : [
+            3, 5, 12, 13, 22
+        ]
     },
     {
         "name": "Jarvis",
@@ -47,7 +62,10 @@
         "actors": [
             "Paul Bettany"
         ],
-        "id": 6
+        "id": 6,
+        "movies" : [
+            1, 3, 6, 7, 11
+        ]
     },
     {
         "name": "Steve Rogers",
@@ -55,7 +73,10 @@
         "actors": [
             "Chris Evans"
         ],
-        "id": 7
+        "id": 7,
+        "movies" : [
+            5, 6, 9, 11, 13, 16, 19, 22
+        ]
     },
     {
         "name": "James 'Bucky' Barnes",
@@ -63,7 +84,10 @@
         "actors": [
             "Sebastian Stan"
         ],
-        "id": 8
+        "id": 8,
+        "movies": [
+            5, 9, 13, 19, 22
+        ]
     },
     {
         "name": "Peggy Carter",
@@ -71,7 +95,10 @@
         "actors": [
             "Hayley Atwell"
         ],
-        "id": 9
+        "id": 9,
+        "movies": [
+            5, 9, 11, 12, 22
+        ]
     },
     {
         "name": "Sam Wilson",
@@ -79,7 +106,10 @@
         "actors": [
             "Anthony Mackie"
         ],
-        "id": 10
+        "id": 10,
+        "movies": [
+            9, 11, 12, 13, 19, 22
+        ]
     },
     {
         "name": "Johann Schmidt",
@@ -88,7 +118,10 @@
             "Hugo Weaving",
             "Ross Marquand"
         ],
-        "id": 11
+        "id": 11,
+        "movies" : [
+            5, 19, 22
+        ]
     },
     {
         "name": "Clint Barton",
@@ -96,7 +129,10 @@
         "actors": [
             "Jeremy Renner"
         ],
-        "id": 12
+        "id": 12,
+        "movies": [
+            4, 6, 11, 13, 19, 22
+        ]
     },
     {
         "name": "Natasha Romanoff",
@@ -104,7 +140,10 @@
         "actors": [
             "Scarlett Johansson"
         ],
-        "id": 13
+        "id": 13,
+        "movies" : [
+            3, 6, 9, 11, 13, 19, 22
+        ]
     },
     {
         "name": "Nick Fury",
@@ -112,7 +151,10 @@
         "actors": [
             "Samuel Jackson"
         ],
-        "id": 14
+        "id": 14,
+        "movies" : [
+            3, 5, 6, 9, 11, 21, 22
+        ]
     },
     {
         "name": "Phil Coulson",
@@ -120,7 +162,10 @@
         "actors": [
             "Clark Gregg"
         ],
-        "id": 15
+        "id": 15,
+        "movies" : [
+            1, 3, 4, 6, 21
+        ]
     },
     {
         "name": "Maria Hill",
@@ -128,7 +173,10 @@
         "actors": [
             "Cobie Smulders"
         ],
-        "id": 16
+        "id": 16,
+        "movies": [
+            6, 9, 11, 22
+        ]
     },
     {
         "name": "Everett Ross",
@@ -136,7 +184,10 @@
         "actors": [
             "Martin Freeman"
         ],
-        "id": 17
+        "id": 17,
+        "movies": [
+            13, 18
+        ]
     },
     {
         "name": "Thor",
@@ -144,7 +195,10 @@
         "actors": [
             "Chris Hemsworth"
         ],
-        "id": 18
+        "id": 18,
+        "movies": [
+            4, 6, 8, 11, 17, 19, 22
+        ]
     },
     {
         "name": "Jane Foster",
@@ -152,7 +206,10 @@
         "actors": [
             "Natalie Portman"
         ],
-        "id": 19
+        "id": 19,
+        "movies" : [
+            4, 8, 22
+        ]
     },
     {
         "name": "Loki",
@@ -160,7 +217,10 @@
         "actors": [
             "Tom Hiddleston"
         ],
-        "id": 20
+        "id": 20,
+        "movies" : [
+            3, 6, 8, 17, 19, 22
+        ]
     },
     {
         "name": "Heimdall",
@@ -168,7 +228,10 @@
         "actors": [
             "Idris Elba"
         ],
-        "id": 21
+        "id": 21,
+        "movies" : [
+            3, 8, 11, 17, 19, 22
+        ]
     },
     {
         "name": "Odin",
@@ -176,7 +239,10 @@
         "actors": [
             "Anthony Hopkins"
         ],
-        "id": 22
+        "id": 22,
+        "movies" : [
+            3, 8, 17
+        ]
     },
     {
         "name": "Frigga",
@@ -184,7 +250,10 @@
         "actors": [
             "Rene Russo"
         ],
-        "id": 23
+        "id": 23,
+        "movies" : [
+            3, 8, 22
+        ]
     },
     {
         "name": "Sif",
@@ -192,7 +261,10 @@
         "actors": [
             "Jaimie Alexander"
         ],
-        "id": 24
+        "id": 24,
+        "movies" : [
+            3, 8
+        ]
     },
     {
         "name": "Erik Selvig",
@@ -200,7 +272,10 @@
         "actors": [
             "Stellan Skarsgard"
         ],
-        "id": 25
+        "id": 25,
+        "movies" : [
+            3, 6, 8, 11
+        ]
     },
     {
         "name": "Korg",
@@ -208,7 +283,10 @@
         "actors": [
             "Taika Waititi"
         ],
-        "id": 26
+        "id": 26,
+        "movies" : [
+            17, 22
+        ]
     },
     {
         "name": "Peter Parker",
@@ -216,7 +294,10 @@
         "actors": [
             "Tom Holland"
         ],
-        "id": 27
+        "id": 27,
+        "movies" : [
+            13, 16, 19, 22
+        ]
     },
     {
         "name": "May Parker",
@@ -224,7 +305,10 @@
         "actors": [
             "Marisa Tomei"
         ],
-        "id": 28
+        "id": 28,
+        "movies" : [
+            13, 16, 22
+        ]
     },
     {
         "name": "Ned Leeds",
@@ -232,7 +316,10 @@
         "actors": [
             "Jacob Batalon"
         ],
-        "id": 29
+        "id": 29,
+        "movies" : [
+            13, 16, 22
+        ]
     },
     {
         "name": "Bruce Banner",
@@ -241,7 +328,10 @@
             "Edward Norton",
             "Mark Ruffalo"
         ],
-        "id": 30
+        "id": 30,
+        "movies" : [
+            2, 6, 11, 19, 22
+        ]
     },
     {
         "name": "Thaddeus Ross",
@@ -249,7 +339,10 @@
         "actors": [
             "William Hurt"
         ],
-        "id": 31
+        "id": 31,
+        "movies" : [
+            2, 13, 19, 22
+        ]
     },
     {
         "name": "Carol Danvers",
@@ -257,7 +350,10 @@
         "actors": [
             "Brie Larson"
         ],
-        "id": 32
+        "id": 32,
+        "movies" : [
+            21, 22
+        ]
     },
     {
         "name": "Vision",
@@ -265,7 +361,10 @@
         "actors": [
             "Paul Bettany"
         ],
-        "id": 33
+        "id": 33,
+        "movies" : [
+            11, 13, 19, 22
+        ]
     },
     {
         "name": "Wanda Maximoff",
@@ -274,6 +373,9 @@
             "Elizabeth Olsen"
         ],
         "id": 34
+        "movies" : [
+            11, 13, 19, 22
+        ]
     },
     {
         "name": "Peter Quill",
@@ -281,7 +383,10 @@
         "actors": [
             "Chris Pratt"
         ],
-        "id": 35
+        "id": 35,
+        "movies" : [
+            10, 15, 19, 22
+        ]
     },
     {
         "name": "Gamora",
@@ -289,7 +394,10 @@
         "actors": [
             "Zoe Saldana"
         ],
-        "id": 36
+        "id": 36,
+        "movies" : [
+            10, 15, 19, 22
+        ]
     },
     {
         "name": "Drax",
@@ -297,7 +405,10 @@
         "actors": [
             "Dave Bautista"
         ],
-        "id": 37
+        "id": 37,
+        "movies" : [
+            10, 15, 19, 22
+        ]
     },
     {
         "name": "Rocket",
@@ -305,7 +416,11 @@
         "actors": [
             "Bradley Cooper"
         ],
-        "id": 38
+        "id": 38,
+        "movies" : [
+            10, 15, 19, 22
+        ]
+
     },
     {
         "name": "Groot",
@@ -313,7 +428,11 @@
         "actors": [
             "Vin Diesel"
         ],
-        "id": 39
+        "id": 39,
+        "movies" : [
+            10, 15, 19, 22
+        ]
+
     },
     {
         "name": "Nebula",
@@ -321,7 +440,11 @@
         "actors": [
             "Karen Gillan"
         ],
-        "id": 40
+        "id": 40,
+        "movies" : [
+            10, 15, 19, 22
+        ]
+
     },
     {
         "name": "Mantis",
@@ -329,7 +452,11 @@
         "actors": [
             "Pom Klementieff"
         ],
-        "id": 41
+        "id": 41,
+        "movies" : [
+            15, 19, 22
+        ]
+
     },
     {
         "name": "Ronan",
@@ -337,7 +464,10 @@
         "actors": [
             "Lee Pace"
         ],
-        "id": 42
+        "id": 42,
+        "movies" : [
+            10, 21
+        ]
     },
     {
         "name": "Scott Lang",
@@ -345,7 +475,10 @@
         "actors": [
             "Paul Rudd"
         ],
-        "id": 43
+        "id": 43,
+        "movies" : [
+            12, 13, 20, 22
+        ]
     },
     {
         "name": "Hank Pym",
@@ -353,7 +486,10 @@
         "actors": [
             "Michael Douglas"
         ],
-        "id": 44
+        "id": 44,
+        "movies" : [
+            12, 13, 20, 22
+        ]
     },
     {
         "name": "Hope Van Dyne",
@@ -361,7 +497,10 @@
         "actors": [
             "Evangeline Lily"
         ],
-        "id": 45
+        "id": 45,
+        "movies" : [
+            12, 13, 20, 22
+        ]
     },
     {
         "name": "Stephen Strange",
@@ -369,7 +508,10 @@
         "actors": [
             "Benedict Cumberbatch"
         ],
-        "id": 46
+        "id": 46,
+        "movies" : [
+            14, 17, 19, 22
+        ]
     },
     {
         "name": "Wong",
@@ -377,7 +519,10 @@
         "actors": [
             "Benedict Wong"
         ],
-        "id": 47
+        "id": 47,
+        "movies" : [
+            14, 19, 22
+        ]
     },
     {
         "name": "The Ancient One",
@@ -385,7 +530,10 @@
         "actors": [
             "Tilda Swinton"
         ],
-        "id": 48
+        "id": 48,
+        "movies" : [
+            14, 22
+        ]
     },
     {
         "name": "T'Challa",
@@ -393,7 +541,10 @@
         "actors": [
             "Chadwick Boseman"
         ],
-        "id": 49
+        "id": 49,
+        "movies" : [
+            13, 18, 19, 22
+        ]
     },
     {
         "name": "Okoye",
@@ -401,7 +552,10 @@
         "actors": [
             "Danai Gurira"
         ],
-        "id": 50
+        "id": 50,
+        "movies" : [
+            18, 19, 22
+        ]
     },
     {
         "name": "Shuri",
@@ -409,7 +563,10 @@
         "actors": [
             "Letitia Wright"
         ],
-        "id": 51
+        "id": 51,
+        "movies" : [
+            18, 19, 22
+        ]
     },
     {
         "name": "Thanos",
@@ -417,6 +574,9 @@
         "actors": [
             "Josh Brolin"
         ],
-        "id": 52
+        "id": 52,
+        "movies" : [
+            10, 19, 22
+        ]
     }
 ]
