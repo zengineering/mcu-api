@@ -6,7 +6,9 @@
         "id": 1,
         "runtime": 126,
         "box-office-usa": 318.4,
-        "box-office-world": 585.2
+        "box-office-world": 585.2,
+        "rotten-tomatoes-critic": 93,
+        "rotten-tomatoes-audience": 91
     },
     {
         "title": "The Incredible Hulk",
@@ -15,7 +17,9 @@
         "id": 2,
         "runtime": 118,
         "box-office-usa": 134.8,
-        "box-office-world": 263.4
+        "box-office-world": 263.4,
+        "rotten-tomatoes-critic": 67,
+        "rotten-tomatoes-audience": 70
     },
     {
         "title": "Iron Man 2",
@@ -24,7 +28,9 @@
         "id": 3,
         "runtime": 124,
         "box-office-usa": 312.4,
-        "box-office-world": 623.9
+        "box-office-world": 623.9,
+        "rotten-tomatoes-critic": 73,
+        "rotten-tomatoes-audience": 71
     },
     {
         "title": "Thor",
@@ -33,7 +39,9 @@
         "id": 4,
         "runtime": 115,
         "box-office-usa": 181.0,
-        "box-office-world": 449.3
+        "box-office-world": 449.3,
+        "rotten-tomatoes-critic": 77,
+        "rotten-tomatoes-audience": 76
     },
     {
         "title": "Captain America: The First Avenger",
@@ -42,7 +50,9 @@
         "id": 5,
         "runtime": 124,
         "box-office-usa": 176.7,
-        "box-office-world": 370.6
+        "box-office-world": 370.6,
+        "rotten-tomatoes-critic": 80,
+        "rotten-tomatoes-audience": 74
     },
     {
         "title": "Marvel's The Avengers",
@@ -51,7 +61,9 @@
         "id": 6,
         "runtime": 143,
         "box-office-usa": 623.4,
-        "box-office-world": 1518.8
+        "box-office-world": 1518.8,
+        "rotten-tomatoes-critic": 92,
+        "rotten-tomatoes-audience": 90
     },
     {
         "title": "Iron Man 3",
@@ -60,7 +72,9 @@
         "id": 7,
         "runtime": 130,
         "box-office-usa": 409.0,
-        "box-office-world": 1214.8
+        "box-office-world": 1214.8,
+        "rotten-tomatoes-critic": 79,
+        "rotten-tomatoes-audience": 78
     },
     {
         "title": "Thor: The Dark World",
@@ -69,7 +83,9 @@
         "id": 8,
         "runtime": 112,
         "box-office-usa": 206.4,
-        "box-office-world": 644.6
+        "box-office-world": 644.6,
+        "rotten-tomatoes-critic": 66,
+        "rotten-tomatoes-audience": 76
     },
     {
         "title": "Captain America: The Winter Soldier",
@@ -78,7 +94,9 @@
         "id": 9,
         "runtime": 136,
         "box-office-usa": 259.8,
-        "box-office-world": 714.3
+        "box-office-world": 714.3,
+        "rotten-tomatoes-critic": 90,
+        "rotten-tomatoes-audience": 92
     },
     {
         "title": "Guardians of the Galaxy",
@@ -87,7 +105,9 @@
         "id": 10,
         "runtime": 121,
         "box-office-usa": 333.2,
-        "box-office-world": 773.3
+        "box-office-world": 773.3,
+        "rotten-tomatoes-critic": 91,
+        "rotten-tomatoes-audience": 92
     },
     {
         "title": "Avengers: Age of Ultron",
@@ -96,7 +116,9 @@
         "id": 11,
         "runtime": 141,
         "box-office-usa": 459.0,
-        "box-office-world": 1405.4
+        "box-office-world": 1405.4,
+        "rotten-tomatoes-critic": 75,
+        "rotten-tomatoes-audience": 83
     },
     {
         "title": "Ant-Man",
@@ -105,7 +127,9 @@
         "id": 12,
         "runtime": 117,
         "box-office-usa": 180.2,
-        "box-office-world": 519.3
+        "box-office-world": 519.3,
+        "rotten-tomatoes-critic": 82,
+        "rotten-tomatoes-audience": 86
     },
     {
         "title": "Captain America: Civil War",
@@ -114,7 +138,9 @@
         "id": 13,
         "runtime": 147,
         "box-office-usa": 408.1,
-        "box-office-world": 1153.3
+        "box-office-world": 1153.3,
+        "rotten-tomatoes-critic": 91,
+        "rotten-tomatoes-audience": 89
     },
     {
         "title": "Doctor Strange",
@@ -123,7 +149,9 @@
         "id": 14,
         "runtime": 115,
         "box-office-usa": 232.6,
-        "box-office-world": 677.7
+        "box-office-world": 677.7,
+        "rotten-tomatoes-critic": 89,
+        "rotten-tomatoes-audience": 86
     },
     {
         "title": "Guardians of the Galaxy Vol. 2",
@@ -132,7 +160,9 @@
         "id": 15,
         "runtime": 136,
         "box-office-usa": 389.8,
-        "box-office-world": 773.3
+        "box-office-world": 773.3,
+        "rotten-tomatoes-critic": 84,
+        "rotten-tomatoes-audience": 87
     },
     {
         "title": "Spider-Man: Homecoming",
@@ -141,7 +171,9 @@
         "id": 16,
         "runtime": 133,
         "box-office-usa": 334.2,
-        "box-office-world": 880.2
+        "box-office-world": 880.2,
+        "rotten-tomatoes-critic": 92,
+        "rotten-tomatoes-audience": 88
     },
     {
         "title": "Thor: Ragnarok",
@@ -150,7 +182,9 @@
         "id": 17,
         "runtime": 130,
         "box-office-usa": 315.1,
-        "box-office-world": 854
+        "box-office-world": 854,
+        "rotten-tomatoes-critic": 92,
+        "rotten-tomatoes-audience": 87
     },
     {
         "title": "Black Panther",
@@ -159,7 +193,9 @@
         "id": 18,
         "runtime": 134,
         "box-office-usa": 700.1,
-        "box-office-world": 1346.9
+        "box-office-world": 1346.9,
+        "rotten-tomatoes-critic": 97,
+        "rotten-tomatoes-audience": 79
     },
     {
         "title": "Avengers: Infinity War",
@@ -168,7 +204,9 @@
         "id": 19,
         "runtime": 149,
         "box-office-usa": 678.8,
-        "box-office-world": 2048.4
+        "box-office-world": 2048.4,
+        "rotten-tomatoes-critic": 85,
+        "rotten-tomatoes-audience": 91
     },
     {
         "title": "Ant-Man and the Wasp",
@@ -177,7 +215,9 @@
         "id": 20,
         "runtime": 118,
         "box-office-usa": 216.7,
-        "box-office-world": 622.7
+        "box-office-world": 622.7,
+        "rotten-tomatoes-critic": 88,
+        "rotten-tomatoes-audience": 76
     },
     {
         "title": "Captain Marvel",
@@ -186,7 +226,9 @@
         "id": 21,
         "runtime": 123,
         "box-office-usa": 420.8,
-        "box-office-world": 1120.2
+        "box-office-world": 1120.2,
+        "rotten-tomatoes-critic": 78,
+        "rotten-tomatoes-audience": 56
     },
     {
         "title": "Avengers: Endgame",
@@ -195,6 +237,8 @@
         "id": 22,
         "runtime": 181,
         "box-office-usa": 619.7,
-        "box-office-world": 2192.2
+        "box-office-world": 2192.2,
+        "rotten-tomatoes-critic": 95,
+        "rotten-tomatoes-audience": 90
     }
 ]
