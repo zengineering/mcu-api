@@ -372,8 +372,8 @@
         "actors": [
             "Elizabeth Olsen"
         ],
-        "id": 34
-        "movies" : [
+        "id": 34,
+        "movies": [
             11, 13, 19, 22
         ]
     },
