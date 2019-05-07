@@ -15,7 +15,7 @@ def the_gunicorn():
 
     service_command = [
         gunicorn_path,
-        'mcu-api.app:get_app()',
+        'mcuapi.app:get_app()',
         '--bind', ':{port}',
         '--enable-stdio-inheritance',
         '--pythonpath', ','.join(sys.path)
