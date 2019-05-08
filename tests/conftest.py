@@ -1,12 +1,23 @@
-import mountepy, os, sys, pytest
+import mountepy
+import os
+import sys
+import pytest
+from falcon import testing
+from unittest.mock import mock_open, call, MagicMock
+from mcuapi.database import Database
+import mcuapi.app
 
 @pytest.fixture
 def mock_store():
     return MagicMock()
 
 @pytest.fixture
-def client(mock_store):
-    api = falconplay.app.create_app(mock_store)
+def db():
+    yield Database()
+
+@pytest.fixture
+def client(db):
+    api = mcuapi.app.create_app(db)
     return testing.TestClient(api)
 
 @pytest.fixture(scope='session')

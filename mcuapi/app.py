@@ -1,7 +1,11 @@
-import os
 import falcon
+import logging
 from mcuapi.films import Film
 from mcuapi.database import Database
+
+logging.basicConfig(filename='mcuapi.log',
+                    format='[%(asctime)s] (%(levelname)s) %(module)s.%(funcName)s: %(message)s',
+                    level=logging.DEBUG)
 
 def create_app(db):
     api = falcon.API()

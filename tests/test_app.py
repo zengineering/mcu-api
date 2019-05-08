@@ -13,8 +13,8 @@ def mock_store():
     return MagicMock()
 
 @pytest.fixture
-def client(mock_store):
-    api = mcuapi.app.create_app(mock_store)
+def client(db):
+    api = mcuapi.app.create_app(db)
     return testing.TestClient(api)
 
 def test_get_film(client):
@@ -30,10 +30,16 @@ def test_get_film(client):
         "rotten-tomatoes-audience": 92
     }
 
-    response = client.simulate_get('/films/9')
+    response = client.simulate_get('/film/9')
     assert response.status == falcon.HTTP_OK
-    result_doc = msgpack.unpackb(response.content, encoding='utf-8')
+    result_doc = msgpack.loads(response.content, raw=False)
     assert result_doc == doc
+
+
+def test_film_count(db):
+    assert len(db._characters) > 10
+    assert len(db._films) == 22
+
 
 # def test_post_image(client, mock_store):
 #     filename = 'fake-image-name.xyz'
