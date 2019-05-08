@@ -8,17 +8,12 @@ from mcuapi.database import Database
 import mcuapi.app
 
 @pytest.fixture
-def mock_store():
+def mockery():
     return MagicMock()
 
 @pytest.fixture
-def db():
+def db(scope='session'):
     yield Database()
-
-@pytest.fixture
-def client(db):
-    api = mcuapi.app.create_app(db)
-    return testing.TestClient(api)
 
 @pytest.fixture(scope='session')
 def the_gunicorn():
@@ -36,3 +31,16 @@ def the_gunicorn():
         yield service
 
 
+@pytest.fixture
+def film():
+    return {
+        "title": "Captain America: The Winter Soldier",
+        "release": "04 April 2014",
+        "director": "Anthony and Joe Russo",
+        "id": 9,
+        "runtime": 136,
+        "box-office-usa": 259.8,
+        "box-office-world": 714.3,
+        "rotten-tomatoes-critic": 90,
+        "rotten-tomatoes-audience": 92
+    }

@@ -9,7 +9,7 @@ logging.basicConfig(filename='mcuapi.log',
 
 def create_app(db):
     api = falcon.API()
-    api.add_route('/film/{index}', Film(db))
+    api.add_route('/films/{index}', Film(db))
     return api
 
 def get_app():

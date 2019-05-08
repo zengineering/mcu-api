@@ -1,24 +1,20 @@
 import falcon
 import msgpack
 import pytest
-import io
 from falcon import testing
-from unittest.mock import mock_open, call, MagicMock
+from urllib.parse import urljoin
 
 import mcuapi.app
-import mcuapi.films
-
-@pytest.fixture
-def mock_store():
-    return MagicMock()
+from mcuapi.constants import MCUAPI_URL
 
 @pytest.fixture
 def client(db):
     api = mcuapi.app.create_app(db)
     return testing.TestClient(api)
 
-def test_get_film(client):
-    doc = {
+@pytest.fixture
+def film():
+    return {
         "title": "Captain America: The Winter Soldier",
         "release": "04 April 2014",
         "director": "Anthony and Joe Russo",
@@ -30,15 +26,19 @@ def test_get_film(client):
         "rotten-tomatoes-audience": 92
     }
 
-    response = client.simulate_get('/film/9')
+
+def test_get_film(client, film):
+    response = client.simulate_get('/films/9')
+    assert response.status == falcon.HTTP_OK
+    result = msgpack.loads(response.content, raw=False)
+    assert result == film
+
+
+def test_get_films(client, db):
+    response = client.simulate_get('/films')
     assert response.status == falcon.HTTP_OK
     result_doc = msgpack.loads(response.content, raw=False)
-    assert result_doc == doc
-
-
-def test_film_count(db):
-    assert len(db._characters) > 10
-    assert len(db._films) == 22
+    assert len(result_doc) == db.film_count()
 
 
 # def test_post_image(client, mock_store):
