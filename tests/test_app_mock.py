@@ -56,3 +56,13 @@ def test_get_chars_mock(mock_db, client):
     mock_db.characters.return_value = []
     client.simulate_get('/characters')
     mock_db.characters.assert_called_once()
+
+
+def test_get_bad_routes(client):
+    response = client.simulate_get('/invalid/route/')
+    assert response.status == falcon.HTTP_NOT_FOUND
+    response = client.simulate_get('/character/1')
+    assert response.status == falcon.HTTP_NOT_FOUND
+    response = client.simulate_get('/film/1')
+    assert response.status == falcon.HTTP_NOT_FOUND
+
