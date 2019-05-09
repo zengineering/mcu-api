@@ -21,7 +21,6 @@ class Character():
     @falcon.after(set_content_type)
     def get_character(self, req, resp, index):
         try:
-            index = int(index)
             character = self._db.character(index)
             resp.data = msgpack.dumps(character, use_bin_type=True)
             self.log.debug('GET character %d', index)

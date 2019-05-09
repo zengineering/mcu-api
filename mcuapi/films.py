@@ -22,7 +22,6 @@ class Film():
     @falcon.after(set_content_type)
     def get_film(self, req, resp, index):
         try:
-            index = int(index)
             film = self._db.film(index)
             resp.data = msgpack.dumps(film, use_bin_type=True)
             self.log.debug('GET film %d', index)
