@@ -34,6 +34,14 @@ def test_get_film(client, film):
     assert result == film
 
 
+def test_get_film_fail(client):
+    '''
+    Get a nonexistent film record
+    '''
+    response = client.simulate_get('/films/999')
+    assert response.status == falcon.HTTP_NOT_FOUND
+
+
 def test_get_films(client, db, film_re):
     '''
     Get all films (list of urls with film id)
@@ -53,6 +61,14 @@ def test_get_character(client, character):
     assert response.status == falcon.HTTP_OK
     result = msgpack.loads(response.content, raw=False)
     assert result == character
+
+
+def test_get_character_fail(client):
+    '''
+    Get a nonexistent character record
+    '''
+    response = client.simulate_get('/characters/999')
+    assert response.status == falcon.HTTP_NOT_FOUND
 
 
 def test_get_characters(client, db, character_re):
