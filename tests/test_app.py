@@ -16,30 +16,18 @@ def client(db):
 
 @pytest.fixture
 def film_re():
-    return re.compile('/'.join((MCUAPI_URL, 'films', '\d+')))
+    return re.compile('/'.join((MCUAPI_URL, 'films', '\\d+')))
 
 
 @pytest.fixture
-def char_re():
-    return re.compile('/'.join((MCUAPI_URL, 'character', '\d+')))
-
-
-@pytest.fixture
-def film():
-    return {
-        "title": "Captain America: The Winter Soldier",
-        "release": "04 April 2014",
-        "director": "Anthony and Joe Russo",
-        "id": 9,
-        "runtime": 136,
-        "box-office-usa": 259.8,
-        "box-office-world": 714.3,
-        "rotten-tomatoes-critic": 90,
-        "rotten-tomatoes-audience": 92
-    }
+def character_re():
+    return re.compile('/'.join((MCUAPI_URL, 'characters', '\\d+')))
 
 
 def test_get_film(client, film):
+    '''
+    Get a specific film record
+    '''
     response = client.simulate_get('/films/9')
     assert response.status == falcon.HTTP_OK
     result = msgpack.loads(response.content, raw=False)
@@ -47,51 +35,33 @@ def test_get_film(client, film):
 
 
 def test_get_films(client, db, film_re):
+    '''
+    Get all films (list of urls with film id)
+    '''
     response = client.simulate_get('/films')
     assert response.status == falcon.HTTP_OK
     result = msgpack.loads(response.content, raw=False)
     assert len(result) == db.film_count()
-    assert result[0] == '/'.join((MCUAPI_URL, 'films', '1'))
     assert all([film_re.match(film) for film in result])
 
 
-# def test_post_image(client, mock_store):
-#     filename = 'fake-image-name.xyz'
-
-#     mock_store.save.return_value = filename
-#     image_content_type = 'image/xyz'
-
-#     response = client.simulate_post (
-#         '/images',
-#         body=b'fake-image-bytes',
-#         headers={'content-type': image_content_type}
-#     )
-
-#     assert response.status == falcon.HTTP_CREATED
-#     assert response.headers['location'] == '/images/{}'.format(filename)
-#     saver_call = mock_store.save.call_args
-
-#     assert isinstance(saver_call[0][0], falcon.request_helpers.BoundedStream)
-#     assert saver_call[0][1] == image_content_type
+def test_get_character(client, character):
+    '''
+    Get a specific character record
+    '''
+    response = client.simulate_get('/characters/26')
+    assert response.status == falcon.HTTP_OK
+    result = msgpack.loads(response.content, raw=False)
+    assert result == character
 
 
-# def test_saving_image(monkeypatch):
-#     mock_file_open = mock_open()
-
-#     fake_uuid = '123e4567-e89b-12d3-a456-426655440000'
-
-#     def mock_uuidgen():
-#         return fake_uuid
-
-#     fake_image_bytes = b'fake-image-bytes'
-#     fake_request_stream = io.BytesIO(fake_image_bytes)
-#     storage_path = 'fake-storage-path'
-#     store = falconplay.images.ImageStore(
-#         storage_path,
-#         uuidgen=mock_uuidgen,
-#         fopen=mock_file_open
-#     )
-
-#     assert store.save(fake_request_stream, 'image/png') == fake_uuid + '.png'
-#     assert call().write(fake_image_bytes) in mock_file_open.mock_calls
+def test_get_characters(client, db, character_re):
+    '''
+    Get all characters (list of urls with character id)
+    '''
+    response = client.simulate_get('/characters')
+    assert response.status == falcon.HTTP_OK
+    result = msgpack.loads(response.content, raw=False)
+    assert len(result) == db.character_count()
+    assert all([character_re.match(character) for character in result])
 

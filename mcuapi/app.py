@@ -1,6 +1,7 @@
 import falcon
 import logging
 from mcuapi.films import Film
+from mcuapi.characters import Character
 from mcuapi.database import Database
 
 logging.basicConfig(filename='mcuapi.log',
@@ -11,6 +12,8 @@ def create_app(db):
     api = falcon.API()
     api.add_route('/films', Film(db))
     api.add_route('/films/{index}', Film(db))
+    api.add_route('/characters', Character(db))
+    api.add_route('/characters/{index}', Character(db))
     return api
 
 def get_app():

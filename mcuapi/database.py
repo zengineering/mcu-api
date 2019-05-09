@@ -31,6 +31,15 @@ class Database():
             return char
 
 
+    def characters(self):
+        return ['/'.join((MCUAPI_URL, 'characters', str(i)))
+                for i in range(1, len(self._characters)+1)]
+
+
+    def character_count(self):
+        return len(self._characters)
+
+
     def film(self, index):
         try:
             film = self._films[index-1]
@@ -44,15 +53,8 @@ class Database():
 
 
     def films(self):
-        return ['/'.join((MCUAPI_URL, 'films', str(i))) for i in range(1, len(self._films)+1)]
-
-
-    def characters(self):
-        return ['/'.join((MCUAPI_URL, 'characters', str(i))) for i in range(1, len(self._films)+1)]
-
-
-    def character_count(self):
-        return len(self._characters)
+        return ['/'.join((MCUAPI_URL, 'films', str(i)))
+                for i in range(1, len(self._films)+1)]
 
 
     def film_count(self):

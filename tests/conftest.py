@@ -32,6 +32,20 @@ def the_gunicorn():
 
 
 @pytest.fixture
+def character():
+    return {
+        "name": "Korg",
+        "alter-ego": "None",
+        "actors": [
+            "Taika Waititi"
+        ],
+        "id": 26,
+        "movies" : [
+            17, 22
+        ]
+    }
+
+@pytest.fixture
 def film():
     return {
         "title": "Captain America: The Winter Soldier",
