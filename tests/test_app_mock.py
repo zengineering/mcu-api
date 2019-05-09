@@ -20,6 +20,12 @@ def client(mockery):
 def test_get_film_mock(mockery, client, film):
     film_id = film['id']
     mockery.film.return_value = film
-    response = client.simulate_get('/films/{}'.format(film_id))
+    client.simulate_get('/films/{}'.format(film_id))
     mockery.film.assert_called_once_with(film_id)
+
+
+def test_get_films_mock(mockery, client):
+    mockery.films.return_value = []
+    client.simulate_get('/films')
+    mockery.films.assert_called_once()
 

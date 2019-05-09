@@ -1,16 +1,28 @@
 import falcon
 import msgpack
 import pytest
+import re
 from falcon import testing
-from urllib.parse import urljoin
 
 import mcuapi.app
 from mcuapi.constants import MCUAPI_URL
+
 
 @pytest.fixture
 def client(db):
     api = mcuapi.app.create_app(db)
     return testing.TestClient(api)
+
+
+@pytest.fixture
+def film_re():
+    return re.compile('/'.join((MCUAPI_URL, 'films', '\d+')))
+
+
+@pytest.fixture
+def char_re():
+    return re.compile('/'.join((MCUAPI_URL, 'character', '\d+')))
+
 
 @pytest.fixture
 def film():
@@ -34,11 +46,13 @@ def test_get_film(client, film):
     assert result == film
 
 
-def test_get_films(client, db):
+def test_get_films(client, db, film_re):
     response = client.simulate_get('/films')
     assert response.status == falcon.HTTP_OK
-    result_doc = msgpack.loads(response.content, raw=False)
-    assert len(result_doc) == db.film_count()
+    result = msgpack.loads(response.content, raw=False)
+    assert len(result) == db.film_count()
+    assert result[0] == '/'.join((MCUAPI_URL, 'films', '1'))
+    assert all([film_re.match(film) for film in result])
 
 
 # def test_post_image(client, mock_store):

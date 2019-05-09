@@ -1,7 +1,9 @@
 import json
 import pathlib
 import logging
+from urllib.parse import urljoin
 from .errors import DatabaseError
+from .constants import MCUAPI_URL
 
 class Database():
     _DATA_PATH = pathlib.Path(__file__).parent.resolve() / 'data'
@@ -39,6 +41,14 @@ class Database():
         else:
             self.log.debug("film lookup: %d", index)
             return film
+
+
+    def films(self):
+        return ['/'.join((MCUAPI_URL, 'films', str(i))) for i in range(1, len(self._films)+1)]
+
+
+    def characters(self):
+        return ['/'.join((MCUAPI_URL, 'characters', str(i))) for i in range(1, len(self._films)+1)]
 
 
     def character_count(self):
