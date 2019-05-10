@@ -10,6 +10,7 @@ class Character():
         self._db = db
         self.log = logging.getLogger(__name__)
 
+
     @falcon.after(set_content_type)
     def on_get(self, req, resp, index=None):
         if index is not None:
@@ -17,6 +18,7 @@ class Character():
         else:
             resp.data = msgpack.dumps(self._db.characters(), use_bin_type=True)
             self.log.debug('GET character list')
+
 
     @falcon.after(set_content_type)
     def get_character(self, req, resp, index):
