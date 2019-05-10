@@ -109,3 +109,12 @@ def test_get_contents(client):
     result = msgpack.loads(response.content, raw=False)
     assert result == Content._CONTENT
 
+
+def test_get_bad_routes(client):
+    response = client.simulate_get('/api/invalid/route/')
+    assert response.status == falcon.HTTP_NOT_FOUND
+    response = client.simulate_get('/api/character/1')
+    assert response.status == falcon.HTTP_NOT_FOUND
+    response = client.simulate_get('/api/film/1')
+    assert response.status == falcon.HTTP_NOT_FOUND
+
