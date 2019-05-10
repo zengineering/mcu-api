@@ -87,5 +87,3 @@ def test_get_bad_routes(client):
     response = client.simulate_get('/api/film/1')
     assert response.status == falcon.HTTP_NOT_FOUND
 
-
-

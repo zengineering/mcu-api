@@ -4,6 +4,7 @@ from mcuapi.films import Film
 from mcuapi.characters import Character
 from mcuapi.database import Database
 from mcuapi.schema import FilmSchema, CharacterSchema
+from mcuapi.content import Content
 
 logging.basicConfig(filename='mcuapi.log',
                     format='[%(asctime)s] (%(levelname)s) %(module)s.%(funcName)s: %(message)s',
@@ -11,6 +12,7 @@ logging.basicConfig(filename='mcuapi.log',
 
 def create_app(db):
     api = falcon.API()
+    api.add_route('/api', Content())
     api.add_route('/api/films', Film(db))
     api.add_route('/api/films/{index:int}', Film(db))
     api.add_route('/api/films/schema', FilmSchema(db))

@@ -7,7 +7,7 @@ from falcon import testing
 import mcuapi.app
 from mcuapi.constants import MCUAPI_URL
 from mcuapi.schema import FilmSchema, CharacterSchema
-from mcuapi.contents import Contents
+from mcuapi.content import Content
 
 
 @pytest.fixture
@@ -101,4 +101,11 @@ def test_get_character_schema(client, db):
     assert response.status == falcon.HTTP_OK
     result = msgpack.loads(response.content, raw=False)
     assert result == db.character_schema
+
+
+def test_get_contents(client):
+    response = client.simulate_get('/api')
+    assert response.status == falcon.HTTP_OK
+    result = msgpack.loads(response.content, raw=False)
+    assert result == Content._CONTENT
 
