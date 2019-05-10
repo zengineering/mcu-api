@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "PLACEHOLDER",
+    "title": "Film",
+    "description": "A film in the Marvel Cinematic Universe",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "The title of the film"
+        },
+        "release": {
+            "type": "string",
+            "description": "The date of the films theatrical release"
+        },
+        "director": {
+            "type": "string",
+            "description": "The name(s) of the film's director(s)"
+        },
+        "id": {
+            "type": "integer",
+            "description": "The unique identifier/index of the film"
+        },
+        "runtime": {
+            "type": "integer",
+            "description": "The runtime of the film in minutes"
+        },
+        "box-office-usa": {
+            "type": "number",
+            "description": "The USA box office revenue produced by the film"
+        },
+        "box-office-world": {
+            "type": "number",
+            "description": "The international box office revenue produced by the film"
+        },
+        "rotten-tomatoes-critic": {
+            "type": "integer",
+            "description": "The Rotten Tomatoes critic review average (tomatometer)"
+        },
+        "rotten-tomatoes-audience": {
+            "type": "integer",
+            "description": "The Rotten Tomatoes average audence score"
+        }
+    },
+    "required": [
+        "title",
+        "release",
+        "director",
+        "id",
+        "runtime",
+        "box-office-usa",
+        "box-office-world",
+        "rotten-tomatoes-critic",
+        "rotten-tomatoes-audience"
+    ]
+}
+

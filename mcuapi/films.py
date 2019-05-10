@@ -16,7 +16,7 @@ class Film():
         if index is not None:
             self.get_film(req, resp, index)
         else:
-            resp.data = msgpack.dumps(self._db.films(), use_bin_type=True)
+            resp.data = msgpack.dumps(self._db.films, use_bin_type=True)
             self.log.debug('GET film list')
 
 

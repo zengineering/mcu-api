@@ -40,7 +40,7 @@ def character():
             "Taika Waititi"
         ],
         "id": 26,
-        "movies" : [
+        "films" : [
             17, 22
         ]
     }

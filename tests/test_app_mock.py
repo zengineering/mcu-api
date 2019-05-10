@@ -1,7 +1,7 @@
 import falcon
 import pytest
 from falcon import testing
-from unittest.mock import call, MagicMock
+from unittest.mock import call, MagicMock, PropertyMock
 from urllib.parse import urljoin
 
 import mcuapi.app
@@ -9,6 +9,11 @@ import mcuapi.app
 @pytest.fixture
 def mock_db():
     return MagicMock()
+
+
+@pytest.fixture
+def mock_db_prop():
+    return PropertyMock()
 
 
 @pytest.fixture
@@ -30,13 +35,21 @@ def test_get_film_mock(mock_db, client, film):
     mock_db.film.assert_called_once_with(film_id)
 
 
-def test_get_films_mock(mock_db, client):
+def test_get_films_mock(mock_db, mock_db_prop, client):
     '''
     proper db method is called for /films
     '''
-    mock_db.films.return_value = []
+    mock_db_prop.return_value = {}
+    type(mock_db).films = mock_db_prop
     client.simulate_get('/films')
-    mock_db.films.assert_called_once()
+    mock_db_prop.assert_called_once()
+
+
+def test_get_film_schema_mock(mock_db, mock_db_prop, client):
+    mock_db_prop.return_value = {}
+    type(mock_db).film_schema = mock_db_prop
+    client.simulate_get('/films/schema')
+    mock_db_prop.assert_called_once()
 
 
 def test_get_char_mock(mock_db, client, character):
@@ -49,13 +62,21 @@ def test_get_char_mock(mock_db, client, character):
     mock_db.character.assert_called_once_with(character_id)
 
 
-def test_get_chars_mock(mock_db, client):
+def test_get_chars_mock(mock_db, mock_db_prop, client):
     '''
     proper db method is called for /characters
     '''
-    mock_db.characters.return_value = []
+    mock_db_prop.return_value = {}
+    type(mock_db).characters = mock_db_prop
     client.simulate_get('/characters')
-    mock_db.characters.assert_called_once()
+    mock_db_prop.assert_called_once()
+
+
+def test_get_character_schema_mock(mock_db, mock_db_prop, client):
+    mock_db_prop.return_value = {}
+    type(mock_db).character_schema = mock_db_prop
+    client.simulate_get('/characters/schema')
+    mock_db_prop.assert_called_once()
 
 
 def test_get_bad_routes(client):
@@ -65,4 +86,6 @@ def test_get_bad_routes(client):
     assert response.status == falcon.HTTP_NOT_FOUND
     response = client.simulate_get('/film/1')
     assert response.status == falcon.HTTP_NOT_FOUND
+
+
 

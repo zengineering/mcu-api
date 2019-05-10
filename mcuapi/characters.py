@@ -16,7 +16,7 @@ class Character():
         if index is not None:
             self.get_character(req, resp, index)
         else:
-            resp.data = msgpack.dumps(self._db.characters(), use_bin_type=True)
+            resp.data = msgpack.dumps(self._db.characters, use_bin_type=True)
             self.log.debug('GET character list')
 
 

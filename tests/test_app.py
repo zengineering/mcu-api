@@ -6,6 +6,7 @@ from falcon import testing
 
 import mcuapi.app
 from mcuapi.constants import MCUAPI_URL
+from mcuapi.schema import FilmSchema, CharacterSchema
 
 
 @pytest.fixture
@@ -49,8 +50,15 @@ def test_get_films(client, db, film_re):
     response = client.simulate_get('/films')
     assert response.status == falcon.HTTP_OK
     result = msgpack.loads(response.content, raw=False)
-    assert len(result) == db.film_count()
+    assert len(result) == db.film_count
     assert all([film_re.match(film) for film in result])
+
+
+def test_get_film_schema(client, db):
+    response = client.simulate_get('/films/schema')
+    assert response.status == falcon.HTTP_OK
+    result = msgpack.loads(response.content, raw=False)
+    assert result == db.film_schema
 
 
 def test_get_character(client, character):
@@ -78,6 +86,13 @@ def test_get_characters(client, db, character_re):
     response = client.simulate_get('/characters')
     assert response.status == falcon.HTTP_OK
     result = msgpack.loads(response.content, raw=False)
-    assert len(result) == db.character_count()
+    assert len(result) == db.character_count
     assert all([character_re.match(character) for character in result])
+
+
+def test_get_character_schema(client, db):
+    response = client.simulate_get('/characters/schema')
+    assert response.status == falcon.HTTP_OK
+    result = msgpack.loads(response.content, raw=False)
+    assert result == db.character_schema
 
