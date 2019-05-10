@@ -1,1 +1,1 @@
-MCUAPI_URL = "http://localhost:8000"
+MCUAPI_URL = "http://localhost:8000/api"

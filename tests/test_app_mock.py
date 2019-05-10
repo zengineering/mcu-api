@@ -31,7 +31,7 @@ def test_get_film_mock(mock_db, client, film):
     '''
     film_id = film['id']
     mock_db.film.return_value = film
-    client.simulate_get('/films/{}'.format(film_id))
+    client.simulate_get('/api/films/{}'.format(film_id))
     mock_db.film.assert_called_once_with(film_id)
 
 
@@ -41,14 +41,14 @@ def test_get_films_mock(mock_db, mock_db_prop, client):
     '''
     mock_db_prop.return_value = {}
     type(mock_db).films = mock_db_prop
-    client.simulate_get('/films')
+    client.simulate_get('/api/films')
     mock_db_prop.assert_called_once()
 
 
 def test_get_film_schema_mock(mock_db, mock_db_prop, client):
     mock_db_prop.return_value = {}
     type(mock_db).film_schema = mock_db_prop
-    client.simulate_get('/films/schema')
+    client.simulate_get('/api/films/schema')
     mock_db_prop.assert_called_once()
 
 
@@ -58,7 +58,7 @@ def test_get_char_mock(mock_db, client, character):
     '''
     character_id = character['id']
     mock_db.character.return_value = character
-    client.simulate_get('/characters/{}'.format(character_id))
+    client.simulate_get('/api/characters/{}'.format(character_id))
     mock_db.character.assert_called_once_with(character_id)
 
 
@@ -68,23 +68,23 @@ def test_get_chars_mock(mock_db, mock_db_prop, client):
     '''
     mock_db_prop.return_value = {}
     type(mock_db).characters = mock_db_prop
-    client.simulate_get('/characters')
+    client.simulate_get('/api/characters')
     mock_db_prop.assert_called_once()
 
 
 def test_get_character_schema_mock(mock_db, mock_db_prop, client):
     mock_db_prop.return_value = {}
     type(mock_db).character_schema = mock_db_prop
-    client.simulate_get('/characters/schema')
+    client.simulate_get('/api/characters/schema')
     mock_db_prop.assert_called_once()
 
 
 def test_get_bad_routes(client):
-    response = client.simulate_get('/invalid/route/')
+    response = client.simulate_get('/api/invalid/route/')
     assert response.status == falcon.HTTP_NOT_FOUND
-    response = client.simulate_get('/character/1')
+    response = client.simulate_get('/api/character/1')
     assert response.status == falcon.HTTP_NOT_FOUND
-    response = client.simulate_get('/film/1')
+    response = client.simulate_get('/api/film/1')
     assert response.status == falcon.HTTP_NOT_FOUND
 
 

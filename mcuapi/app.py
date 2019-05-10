@@ -11,12 +11,12 @@ logging.basicConfig(filename='mcuapi.log',
 
 def create_app(db):
     api = falcon.API()
-    api.add_route('/films', Film(db))
-    api.add_route('/films/{index:int}', Film(db))
-    api.add_route('/films/schema', FilmSchema(db))
-    api.add_route('/characters', Character(db))
-    api.add_route('/characters/{index:int}', Character(db))
-    api.add_route('/characters/schema', CharacterSchema(db))
+    api.add_route('/api/films', Film(db))
+    api.add_route('/api/films/{index:int}', Film(db))
+    api.add_route('/api/films/schema', FilmSchema(db))
+    api.add_route('/api/characters', Character(db))
+    api.add_route('/api/characters/{index:int}', Character(db))
+    api.add_route('/api/characters/schema', CharacterSchema(db))
     return api
 
 def get_app():
