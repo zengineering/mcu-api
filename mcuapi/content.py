@@ -2,7 +2,7 @@ import falcon
 import logging
 import msgpack
 
-from .utils import set_content_type
+from .utils import set_content_formatter
 from .constants import MCUAPI_URL
 
 class Content():
@@ -17,11 +17,13 @@ class Content():
         }
     }
 
+
     def __init__(self):
         self._log = logging.getLogger(__name__)
+        self.formatter = None
 
 
-    @falcon.after(set_content_type)
+    @falcon.before(set_content_formatter)
     def on_get(self, req, resp):
         resp.data = msgpack.dumps(self._CONTENT, use_bin_type=True)
         self._log.info("GET Contents")
