@@ -79,11 +79,3 @@ def test_get_character_schema_mock(mock_db, mock_db_prop, client):
     mock_db_prop.assert_called_once()
 
 
-def test_get_bad_routes(client):
-    response = client.simulate_get('/api/invalid/route/')
-    assert response.status == falcon.HTTP_NOT_FOUND
-    response = client.simulate_get('/api/character/1')
-    assert response.status == falcon.HTTP_NOT_FOUND
-    response = client.simulate_get('/api/film/1')
-    assert response.status == falcon.HTTP_NOT_FOUND
-
