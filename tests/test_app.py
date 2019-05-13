@@ -11,7 +11,7 @@ from mcuapi.schema import FilmSchema, CharacterSchema
 from mcuapi.content import Content
 from mcuapi.utils import MEDIA_HANDLERS
 
-MEDIA_PARAMS = (
+MEDIA_FMT_PARAMS = (
     ('msgpack', lambda data: msgpack.loads(data, raw=False)),
     ('json', json.loads),
     ('', json.loads)
@@ -38,7 +38,7 @@ def api_path():
     return "api"
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_film(client, film, fmt, unpacker):
     '''
     Get a specific film record
@@ -58,7 +58,7 @@ def test_get_film_fail(client):
     assert result.status == falcon.HTTP_NOT_FOUND
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_films(client, db, film_re, fmt, unpacker):
     '''
     Get all films (list of urls with film id)
@@ -71,7 +71,7 @@ def test_get_films(client, db, film_re, fmt, unpacker):
     assert all([film_re.match(film) for film in result_unpacked])
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_film_schema(client, db, fmt, unpacker):
     params = {'format': fmt} if fmt else None
     result = client.simulate_get('/api/films/schema', params=params)
@@ -80,7 +80,7 @@ def test_get_film_schema(client, db, fmt, unpacker):
     assert result_unpacked == db.film_schema
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_character(client, character, fmt, unpacker):
     '''
     Get a specific character record
@@ -100,7 +100,7 @@ def test_get_character_fail(client):
     assert result.status == falcon.HTTP_NOT_FOUND
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_characters(client, db, character_re, fmt, unpacker):
     '''
     Get all characters (list of urls with character id)
@@ -113,7 +113,7 @@ def test_get_characters(client, db, character_re, fmt, unpacker):
     assert all([character_re.match(character) for character in result_unpacked])
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_character_schema(client, db, fmt, unpacker):
     params = {'format': fmt} if fmt else None
     result = client.simulate_get('/api/characters/schema', params=params)
@@ -122,7 +122,7 @@ def test_get_character_schema(client, db, fmt, unpacker):
     assert result_unpacked == db.character_schema
 
 
-@pytest.mark.parametrize('fmt,unpacker', MEDIA_PARAMS)
+@pytest.mark.parametrize('fmt,unpacker', MEDIA_FMT_PARAMS)
 def test_get_contents(client, fmt, unpacker):
     params = {'format': fmt} if fmt else None
     result = client.simulate_get('/api', params=params)
