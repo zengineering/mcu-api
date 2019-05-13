@@ -17,14 +17,14 @@ class Film():
         if index is not None:
             self.get_film(req, resp, index)
         else:
-            resp.data = msgpack.dumps(self._db.films, use_bin_type=True)
+            self.formatter(self._db.films)
             self.log.debug('GET film list')
 
 
     def get_film(self, req, resp, index):
         try:
             film = self._db.film(index)
-            resp.data = msgpack.dumps(film, use_bin_type=True)
+            self.formatter(film)
             self.log.debug('GET film %d', index)
         except (DatabaseError, ValueError):
             raise falcon.HTTPNotFound()

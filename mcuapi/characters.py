@@ -18,14 +18,14 @@ class Character():
         if index is not None:
             self.get_character(req, resp, index)
         else:
-            resp.data = msgpack.dumps(self._db.characters, use_bin_type=True)
+            self.formatter(self._db.characters)
             self.log.debug('GET character list')
 
 
     def get_character(self, req, resp, index):
         try:
             character = self._db.character(index)
-            resp.data = msgpack.dumps(character, use_bin_type=True)
+            self.formatter(character)
             self.log.debug('GET character %d', index)
         except (DatabaseError, ValueError):
             raise falcon.HTTPNotFound()

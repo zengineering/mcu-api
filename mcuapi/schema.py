@@ -13,7 +13,7 @@ class FilmSchema():
 
     @falcon.before(set_content_formatter)
     def on_get(self, req, resp):
-        resp.data = msgpack.dumps(self._db.film_schema, use_bin_type=True)
+        self.formatter(self._db.film_schema)
         self._log.debug('GET character schema')
 
 
@@ -24,6 +24,6 @@ class CharacterSchema():
 
     @falcon.before(set_content_formatter)
     def on_get(self, req, resp):
-        resp.data = msgpack.dumps(self._db.character_schema, use_bin_type=True)
+        self.formatter(self._db.character_schema)
         self._log.debug('GET character schema')
 

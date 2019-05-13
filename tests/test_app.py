@@ -1,6 +1,7 @@
+import pytest
 import falcon
 import msgpack
-import pytest
+import json
 import re
 from falcon import testing
 
@@ -31,13 +32,18 @@ def api_path():
     return "api"
 
 
-def test_get_film(client, film):
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_film(client, film, fmt, unpacker):
     '''
     Get a specific film record
     '''
-    response = client.simulate_get('/api/films/9')
+    response = client.simulate_get('/api/films/9', params={'format': fmt} if fmt else None)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert result == film
 
 

@@ -25,6 +25,6 @@ class Content():
 
     @falcon.before(set_content_formatter)
     def on_get(self, req, resp):
-        resp.data = msgpack.dumps(self._CONTENT, use_bin_type=True)
+        self.formatter(self._CONTENT)
         self._log.info("GET Contents")
 

@@ -1,6 +1,7 @@
-Characters in Film
-URLs for character.films, film.characters
-replace id with self url
-last change date
-format param
-    json tests
+- Characters in Film
+- URLs for character.films, film.characters
+- replace id with self url
+- last change date
+- format param
+    + json tests
+    + use built in MediaHandlers
