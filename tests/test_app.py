@@ -9,11 +9,12 @@ import mcuapi.app
 from mcuapi.constants import MCUAPI_URL
 from mcuapi.schema import FilmSchema, CharacterSchema
 from mcuapi.content import Content
+from mcuapi.utils import MEDIA_HANDLERS
 
 
 @pytest.fixture
 def client(db):
-    api = mcuapi.app.create_app(db)
+    api = mcuapi.app.create_app(db, MEDIA_HANDLERS)
     return testing.TestClient(api)
 
 

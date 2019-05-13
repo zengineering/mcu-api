@@ -2,7 +2,13 @@ import falcon
 import json
 import msgpack
 import logging
+from functools import partial
 
+
+MEDIA_HANDLERS = {
+    'application/json': falcon.media.JSONHandler(dumps=partial(json.dumps, ensure_ascii=False)),
+    'application/msgpack': falcon.media.MessagePackHandler()
+}
 
 def set_content_formatter(req, resp, resource, params):
     log = logging.getLogger(__name__)
