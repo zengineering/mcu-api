@@ -42,7 +42,8 @@ def test_get_film(client, film, fmt, unpacker):
     '''
     Get a specific film record
     '''
-    response = client.simulate_get('/api/films/9', params={'format': fmt} if fmt else None)
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api/films/9', params=params)
     assert response.status == falcon.HTTP_OK
     result = unpacker(response.content)
     assert result == film
@@ -56,31 +57,49 @@ def test_get_film_fail(client):
     assert response.status == falcon.HTTP_NOT_FOUND
 
 
-def test_get_films(client, db, film_re):
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_films(client, db, film_re, fmt, unpacker):
     '''
     Get all films (list of urls with film id)
     '''
-    response = client.simulate_get('/api/films')
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api/films', params=params)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert len(result) == db.film_count
     assert all([film_re.match(film) for film in result])
 
 
-def test_get_film_schema(client, db):
-    response = client.simulate_get('/api/films/schema')
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_film_schema(client, db, fmt, unpacker):
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api/films/schema', params=params)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert result == db.film_schema
 
 
-def test_get_character(client, character):
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_character(client, character, fmt, unpacker):
     '''
     Get a specific character record
     '''
-    response = client.simulate_get('/api/characters/26')
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api/characters/26', params=params)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert result == character
 
 
@@ -92,28 +111,46 @@ def test_get_character_fail(client):
     assert response.status == falcon.HTTP_NOT_FOUND
 
 
-def test_get_characters(client, db, character_re):
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_characters(client, db, character_re, fmt, unpacker):
     '''
     Get all characters (list of urls with character id)
     '''
-    response = client.simulate_get('/api/characters')
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api/characters', params=params)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert len(result) == db.character_count
     assert all([character_re.match(character) for character in result])
 
 
-def test_get_character_schema(client, db):
-    response = client.simulate_get('/api/characters/schema')
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_character_schema(client, db, fmt, unpacker):
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api/characters/schema', params=params)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert result == db.character_schema
 
 
-def test_get_contents(client):
-    response = client.simulate_get('/api')
+@pytest.mark.parametrize('fmt,unpacker', (
+    ('msgpack', lambda data: msgpack.loads(data, raw=False)),
+    ('json', json.loads),
+    # ('', json.loads)
+))
+def test_get_contents(client, fmt, unpacker):
+    params = {'format': fmt} if fmt else None
+    response = client.simulate_get('/api', params=params)
     assert response.status == falcon.HTTP_OK
-    result = msgpack.loads(response.content, raw=False)
+    result = unpacker(response.content)
     assert result == Content._CONTENT
 
 
