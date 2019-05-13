@@ -6,6 +6,7 @@ from mcuapi.characters import Character
 from mcuapi.database import Database
 from mcuapi.schema import FilmSchema, CharacterSchema
 from mcuapi.content import Content
+from mcuapi.utils import MEDIA_HANDLERS
 
 logging.basicConfig(filename='mcuapi.log',
                     format='[%(asctime)s] (%(levelname)s) %(module)s.%(funcName)s: %(message)s',
@@ -30,4 +31,4 @@ def create_app(db, handlers=None):
 
 def get_app():
     db = Database()
-    return create_app(db, handlers)
+    return create_app(db, MEDIA_HANDLERS)

@@ -2,7 +2,7 @@ import falcon
 import logging
 import msgpack
 
-from .utils import set_content_formatter
+from .utils import set_content_format
 from .constants import MCUAPI_URL
 
 class Content():
@@ -20,11 +20,10 @@ class Content():
 
     def __init__(self):
         self._log = logging.getLogger(__name__)
-        self.formatter = None
 
 
-    @falcon.before(set_content_formatter)
+    @falcon.before(set_content_format)
     def on_get(self, req, resp):
-        self.formatter(self._CONTENT)
+        resp.media = self._CONTENT
         self._log.info("GET Contents")
 

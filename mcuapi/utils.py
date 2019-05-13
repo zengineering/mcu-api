@@ -1,6 +1,5 @@
 import falcon
 import json
-import msgpack
 import logging
 from functools import partial
 
@@ -10,16 +9,14 @@ MEDIA_HANDLERS = {
     'application/msgpack': falcon.media.MessagePackHandler()
 }
 
-def set_content_formatter(req, resp, resource, params):
+def set_content_format(req, resp, resource, params):
     log = logging.getLogger(__name__)
-    if 'format' in req.params and req.params['format'] == 'json':
-        def formatter(data):
-            resp.body = json.dumps(data, ensure_ascii=False)
-            resp.content_type = falcon.MEDIA_JSON
+    if 'format' in req.params and req.params['format'] == 'msgpack':
+        resp.content_type = falcon.MEDIA_MSGPACK
+        log.debug("req, format=msgpack")
     else:
-        def formatter(data):
-            resp.data = msgpack.dumps(data, use_bin_type=True)
-            resp.content_Type = falcon.MEDIA_MSGPACK
+        resp.content_type = falcon.MEDIA_JSON
+        log.debug("req, format=json")
 
-    resource.formatter = formatter
-
+def set_content_formatter(req, resp, resource, params):
+    pass
